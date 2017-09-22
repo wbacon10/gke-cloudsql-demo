@@ -23,12 +23,12 @@ spec:
             - name: WORDPRESS_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: cloudsql-database-credentials
+                  name: cloudsql-db-creds
                   key: password
             - name: WORDPRESS_DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: cloudsql-database-credentials
+                  name: cloudsql-db-creds
                   key: username
             # [END cloudsql_secrets]
           ports:

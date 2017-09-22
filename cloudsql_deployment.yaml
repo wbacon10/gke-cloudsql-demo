@@ -1,13 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: wordpress
+  name: wordpress2
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: wordpress
+        app: wordpress2
     spec:
       containers:
         - image: wordpress:4.4.2-apache
@@ -33,7 +33,7 @@ spec:
             # [END cloudsql_secrets]
           ports:
             - containerPort: 80
-              name: wordpress
+              name: wordpress2
         # Change [INSTANCE_CONNECTION_NAME] here to include your GCP
         # project, the region of your Cloud SQL instance and the name
         # of your Cloud SQL instance. The format is
